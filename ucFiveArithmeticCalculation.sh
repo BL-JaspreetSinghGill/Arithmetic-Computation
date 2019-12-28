@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-#ARITHMETIC COMPUTATION AND SORTING : USE CASE 4 -> Calculating c + a / b;
+#ARITHMETIC COMPUTATION AND SORTING : USE CASE 5 -> Calculating a % b + c;
 
 takeUserInput () {
 	read -p "ENTER THE FIRST NUMBER : " firstNumber;
@@ -21,9 +21,15 @@ arithmeticCalculation2 () {
 }
 
 arithmeticCalculation3 () {
-   result3=$(($thirdNumber+$firstNumber/$secondNumber));
+	result3=$(($thirdNumber+$firstNumber/$secondNumber));
 
-   echo $result3;
+	echo $result3;
+}
+
+arithmeticCalculation4 () {
+	result4=$(($firstNumber%$secondNumber+$thirdNumber));
+
+	echo $result4;
 }
 
 arithmeticMain () {
@@ -31,6 +37,7 @@ arithmeticMain () {
 	arithmeticCalculation1;
 	arithmeticCalculation2;
 	arithmeticCalculation3;
+	arithmeticCalculation4;
 }
 
 arithmeticMain;
